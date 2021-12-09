@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background-image: url(https://images.pexels.com/photos/7134994/pexels-photo-7134994.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-position:center;
+    background-size: cover;
+   background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 120vh;
+    font-family: 'Lato', sans-serif;
+    color:#4166f5;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+}
+
+h2{
+    font-size: 22px;
+ }
+ p{
+     font-size: 18px;
+ }
+ 
+ h1{
+     text-align: center;
+ }
+
+.filter-container{
+    width: 80vw;
+    max-width: 800px;
+    margin-top: 20px;
+}
+.filter{
+    width: 100%;
+    padding: 12px;
+    border:none;
+    border-radius: 8px;
+    color:#ff1493 ;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+ .post{
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    max-width: 800px;
+    margin:20px 0;   
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    display: flex;
+}
+.post-title{
+    color:#ff1493
+    ;
+}
+
+.post-info{
+   padding: 10px;
+    line-height: 1.3;
+}
+.post .number{
+    /* Bringing it to outside  */
+    position: absolute;
+    top:-15px;
+    left:-15px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #4166f5;
+    width: 20px;
+    height: 20px;
+}
+/* Animation for the circles  */
+
+.loader{
+    opacity: 0;
+    position: fixed;
+    bottom:40px;
+    display: flex;
+    transition: opacity 0.3s ease-in;
+}
+.show{
+    opacity: 1;
+}
+
+.circle{
+    background-color: blue;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin: 5px;
+    animation: bounce 0.5s ease-in infinite;
+}
+.circle:nth-child(2){
+   animation-delay: 0.1s;
+}
+.circle:nth-child(3){
+    animation-delay: 0.2s;
+ }
+@keyframes bounce{
+    0%, /*At 0th nothing happens */
+    100%{
+        /*At the last it goes to nothing*/
+        transform:translateY(0) ;
+    }
+    50%{
+        transform:translateY(-5px) ;
+    }
+}
